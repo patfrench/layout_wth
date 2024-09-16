@@ -1,1 +1,208 @@
+<!doctype html>
+<html lang="us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI color Page</title>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/ui-darkness/jquery-ui.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Option 1: Include in HTML -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                overflow: auto; /* Add scroll if content exceeds viewport */
+            }
+            .card {
+                position: absolute;
+                width: auto;
+                height: auto;
+                border: solid;        
+                }
+            .fullscreen {
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000; /* Ensure the card stays on top */
+            }
+            #collapsed-cards-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #f8f9fa;
+                border-top: 1px solid #dee2e6;
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                z-index: 1000;
+            }
+            .collapsed-card-placeholder {
+                margin: 5px;
+                padding: 5px 10px;
+                background-color: #e9ecef;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
 
+    </head>
+
+    <body>
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <div class="d-flex justify-content-between align-items-center"> 
+                        <a class="navbar-brand">Sensor Line1 Addr5</a>
+                        <form class="d-flex">
+                            <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Min/Max
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
+                                    <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5m5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5M0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5m10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0z"></path>
+                                </svg>
+                            </a>
+                        </form>
+                    </div>
+                </ul>
+            </div>
+            <div class="collapse show" id="collapse2">
+                <div class="card-body" id="test">
+                    <img src="OLCT80.svg"   width="300" height="300" alt="...">
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <div class="d-flex justify-content-between align-items-center"> 
+                        <a class="navbar-brand">Sensor Line1 Addr5</a>
+                        <form class="d-flex">
+                            <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Min/Max
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
+                                    <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5m5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5M0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5m10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0z"></path>
+                                </svg>
+                            </a>
+                        </form>
+                    </div>
+                </ul>
+            </div>
+            <div class="collapse show" id="collapse3">
+                <div class="card-body" id="test">
+                    <img src="I-TRANS2.svg"   width="200" height="200" alt="...">
+                </div>
+                <div class="card-footer text-muted">
+                    3 days ago
+                </div>
+            </div>
+        </div>
+
+        <div id="collapsed-cards-footer"></div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $( function() {
+                    $(".card").draggable({
+                        scroll: true,
+                        cursor : "move",
+                        snap: true
+                    });
+                    $(".card").resizable({
+                        ghost: true,
+                        grid: [20,20],
+                        resize: function (event, ui) {
+                            var $card = $(this);
+                            var totalHeight = ui.size.height;
+                            var headerHeight = $card.find('.card-header').outerHeight();
+                            var footerHeight = $card.find('.card-footer').outerHeight();
+                            var bodyHeight = totalHeight - headerHeight - footerHeight;
+
+                            // Ajuster la hauteur du body
+                            $card.find('.card-body').height(bodyHeight);
+
+                            // Repositionner le footer
+                            $card.find('.card-footer').css({
+                                position: 'absolute',
+                                bottom: 0,
+                                width: '100%'
+                            });
+
+                            // Ajuster la hauteur totale de la carte pour inclure le footer
+                            $card.height(totalHeight);
+                        },
+                        refreshPositions: true
+                    });
+                });
+
+                // Utilisez l'événement 'shown.bs.collapse' pour le 'show' et 'hidden.bs.collapse' pour le 'hide'
+                $(document).on('click', '.card-header a[data-bs-toggle="collapse"]', function(event) {
+                    event.preventDefault();
+
+                    let target = $(this).closest('.card').find('.collapse');
+                    $(target).collapse('toggle');
+                });
+
+                $(document).on('shown.bs.collapse', '.collapse', function() {
+                    let $card = $(this).closest('.card');
+                    $card.resizable("enable");
+                    $card.css({
+                        border: "solid"
+                    });
+                });
+
+                $(document).on('hidden.bs.collapse', '.collapse', function() {
+                    let $card = $(this).closest('.card');
+                    $card.resizable("disable");
+                    $card.css({
+                        borderColor: "white"
+                    });
+                });
+
+                function updateCollapsedCardsFooter() {
+                    var $footer = $('#collapsed-cards-footer');
+                    $footer.empty(); // Vider le footer
+
+                    $('.card').each(function() {
+                        var $card = $(this);
+                        var $collapse = $card.find('.collapse');
+                        if (!$collapse.hasClass('show')) {
+                            var cardTitle = $card.find('.navbar-brand').text();
+                            var $placeholder = $('<div class="collapsed-card-placeholder">')
+                                .text(cardTitle)
+                                .on('click', function() {
+                                    $collapse.collapse('show');
+                                    $card.show();
+                                    $(this).remove();
+                                });
+                            $footer.append($placeholder);
+                            $card.hide(); // Cacher la carte originale
+                        }
+                    });
+                }
+
+                // Appeler la fonction lors du collapse/expand
+                $(document).on('hidden.bs.collapse shown.bs.collapse', '.collapse', function() {
+                    updateCollapsedCardsFooter();
+                });
+
+                // Initialiser le footer au chargement de la page
+                updateCollapsedCardsFooter();
+
+            });
+
+        </script>
+    </body>
+</html>
