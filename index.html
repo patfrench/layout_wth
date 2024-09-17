@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>jQuery UI color Page</title>
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/ui-darkness/jquery-ui.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!-- Option 1: Include in HTML -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <style>
@@ -16,19 +16,11 @@
                 overflow: auto; /* Add scroll if content exceeds viewport */
             }
             .card {
-                position: absolute;
+                position: fixed;
                 width: auto;
                 height: auto;
-                border: solid;        
+                        
                 }
-            .fullscreen {
-                width: 100vw;
-                height: 100vh;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 1000; /* Ensure the card stays on top */
-            }
             #collapsed-cards-footer {
                 position: fixed;
                 bottom: 0;
@@ -61,7 +53,7 @@
                     <div class="d-flex justify-content-between align-items-center"> 
                         <a class="navbar-brand">Sensor Line1 Addr5</a>
                         <form class="d-flex">
-                            <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
                                 Min/Max
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
                                     <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5m5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5M0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5m10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0z"></path>
@@ -73,7 +65,7 @@
             </div>
             <div class="collapse show" id="collapse2">
                 <div class="card-body" id="test">
-                    <img src="OLCT80.svg"   width="300" height="300" alt="...">
+                    zefhLQIZEFHlzebZILEUGBzilgbLZIEGUBzmiegbZMG
                 </div>
                 <div class="card-footer text-muted">
                     2 days ago
@@ -87,7 +79,7 @@
                     <div class="d-flex justify-content-between align-items-center"> 
                         <a class="navbar-brand">Sensor Line1 Addr5</a>
                         <form class="d-flex">
-                            <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <a href="#" class="text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseExample">
                                 Min/Max
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
                                     <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5m5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5M0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5m10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0z"></path>
@@ -111,7 +103,8 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
         <script>
             $(document).ready(function(){
                 $( function() {
@@ -120,88 +113,37 @@
                         cursor : "move",
                         snap: true
                     });
-                    $(".card").resizable({
+                    $(".card-body").resizable({
                         ghost: true,
                         grid: [20,20],
-                        resize: function (event, ui) {
-                            var $card = $(this);
-                            var totalHeight = ui.size.height;
-                            var headerHeight = $card.find('.card-header').outerHeight();
-                            var footerHeight = $card.find('.card-footer').outerHeight();
-                            var bodyHeight = totalHeight - headerHeight - footerHeight;
-
-                            // Ajuster la hauteur du body
-                            $card.find('.card-body').height(bodyHeight);
-
-                            // Repositionner le footer
-                            $card.find('.card-footer').css({
-                                position: 'absolute',
-                                bottom: 0,
-                                width: '100%'
-                            });
-
-                            // Ajuster la hauteur totale de la carte pour inclure le footer
-                            $card.height(totalHeight);
-                        },
                         refreshPositions: true
                     });
                 });
-
-                // Utilisez l'événement 'shown.bs.collapse' pour le 'show' et 'hidden.bs.collapse' pour le 'hide'
-                $(document).on('click', '.card-header a[data-bs-toggle="collapse"]', function(event) {
-                    event.preventDefault();
-
-                    let target = $(this).closest('.card').find('.collapse');
-                    $(target).collapse('toggle');
-                });
-
-                $(document).on('shown.bs.collapse', '.collapse', function() {
+                
+                // Capture de l'evenement masqué
+                $('.collapse').on('hidden.bs.collapse', function() {
                     let $card = $(this).closest('.card');
-                    $card.resizable("enable");
-                    $card.css({
-                        border: "solid"
-                    });
-                });
+                    let cardId = $card.attr('id');
+                    
+                    // Créez un élément de remplacement dans le pied de page de type texte clickable
+                    let placeholder = $('<div class="collapsed-card-placeholder" data-card-id="' + cardId + '">' + $card.find('.card-header').text() + '</div>');
+                    $('#collapsed-cards-footer').append(placeholder);
 
-                $(document).on('hidden.bs.collapse', '.collapse', function() {
-                    let $card = $(this).closest('.card');
-                    $card.resizable("disable");
-                    $card.css({
-                        borderColor: "white"
-                    });
-                });
+                    // Masquez la carte
+                    $card.hide(); 
 
-                function updateCollapsedCardsFooter() {
-                    var $footer = $('#collapsed-cards-footer');
-                    $footer.empty(); // Vider le footer
+                    // Ajoutez l'événement click à l'élément card reduite dans le pied de page
+                    placeholder.on('click', function() {
+                        console.log("click");
+                        // Réaffichez la carte et ensuite avtive le mode **ouverte**
+                        $card.show();
+                        $card.find('.collapse').collapse('show');
+                        // Supprimez l'élément de remplacement de type texte clickable
+                        $(this).remove();
+                    });   
+                });               
+            }); 
 
-                    $('.card').each(function() {
-                        var $card = $(this);
-                        var $collapse = $card.find('.collapse');
-                        if (!$collapse.hasClass('show')) {
-                            var cardTitle = $card.find('.navbar-brand').text();
-                            var $placeholder = $('<div class="collapsed-card-placeholder">')
-                                .text(cardTitle)
-                                .on('click', function() {
-                                    $collapse.collapse('show');
-                                    $card.show();
-                                    $(this).remove();
-                                });
-                            $footer.append($placeholder);
-                            $card.hide(); // Cacher la carte originale
-                        }
-                    });
-                }
-
-                // Appeler la fonction lors du collapse/expand
-                $(document).on('hidden.bs.collapse shown.bs.collapse', '.collapse', function() {
-                    updateCollapsedCardsFooter();
-                });
-
-                // Initialiser le footer au chargement de la page
-                updateCollapsedCardsFooter();
-
-            });
 
         </script>
     </body>
